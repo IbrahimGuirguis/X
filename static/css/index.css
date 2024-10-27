@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@200;500&display=swap');
+
+#main-container{
+    display:grid;
+    grid-template-columns:26.25% 40% 33.75%;
+}
+/*NavBar(Left Section)*/
+.leftSectionBlock{
+    position: fixed;
+    top:1.5vh;
+}
+.twitterLogo{
+    color:rgb(29,155,240);
+    font-size: 28px;
+}
+a.leftSectionIcons{
+    display: flex;
+    font-size: 22px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    margin-top: 4.5vh;
+}
+
+.leftSectionIconWords{
+    padding-left: 1.5vw;
+}
+.leftButtonItem{
+    margin-top: 2.75vh;
+}
+.leftButton{
+    height: 6.75vh;
+    width: 14vw;
+    border-radius:40px;
+    border-style:none;
+    color: white;
+    background-color: rgb(29,155,240);
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition-duration: 0.25s;
+}
+.leftButton:hover{
+    background-color: rgb(26, 140, 216);
+}
+.leftPersonalItem{
+    display: flex;
+    flex-wrap: wrap;
+    width: 16vw;
+    height: 3vw;
+    margin-top: 12vh;
+    padding-top: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius:50px;
+    text-decoration: none;
+    transition-duration: 0.25s;
+}
+.leftPersonalItem:hover{
+    background-color: rgb(232, 232, 232);
+}
+.leftPersonalPicture{
+    width: 2.8vw;
+    height: 6vh;
+    border-radius: 50%;
+    position: relative;
+    bottom: 1vh;
+    left:1vh;
+}
+.leftPersonalName{
+    width:12vw;
+    box-sizing: border-box;
+    padding-left: 1vw;
+    color:black;
+}
+.leftPersonalMention{
+    padding-left: 4vw;
+    padding-bottom: 2vh;
+    color:gray;
+    position: relative;
+    bottom:3vh;
+}
+/*End of Nav Bar (Left Section)*/
+/*=================================================================================================*/
+/*Note ==> Middle Section Contains Two Sections Which Is The Upper Side And Down Side*/
+.middleSection{
+    border-style:none solid none solid;
+    border-color: rgb(240, 240, 240);
+    border-width: 0.25px; 
+}
+/* Styling of the (UPPER SIDE) of the middle section*/
+.upperSide{
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top:0;
+    height:12.8vh;
+    border-style:none none solid none;
+    border-color: rgb(240, 240, 240);
+    border-width: 0.25px;
+    background-color: white;
+    opacity: 0.95;
+    /* backdrop-filter: blur(10px);
+    box-shadow: 0 20px 30px rgba(255, 255, 255,0.15); */
+    z-index: 100;
+}
+.home{
+    width: 100%;
+    height:6.4vh;
+    box-sizing: border-box;  
+    padding-top: 1vh;
+    padding-left: 2.1vh;
+    font-size: 20px;
+    color:rgb(35, 35, 35);
+    font-family: 'Roboto', sans-serif;
+}
+.forYou{
+    width:50%; 
+    height:6.4vh;   
+    text-align:center;
+    color:rgb(95, 95, 95);
+    font-size: 17px;
+    text-decoration: none;
+    padding: 1.9vh;
+    box-sizing: border-box; 
+    font-family: 'Karla', sans-serif;
+    transition-duration: 0.3s;
+}
+.following{
+    width:50%;
+    height:6.4vh;
+    text-align:center;
+    font-size: 17px;
+    color:rgb(95, 95, 95);
+    text-decoration: none;
+    padding: 1.9vh;
+    box-sizing: border-box;   
+    font-family: 'Karla', sans-serif;
+    transition-duration: 0.3s;
+}
+.forYou:hover{
+    background-color:rgb(230, 230, 230);
+}
+.following:hover{
+    background-color:rgb(230, 230, 230);
+}
+
+
+/*(Common Template) 
+is block contain 3 vertical blocks with different widths which areleftOfTemplate, middleOfTemplate
+ and rightOfTemplate. the middle block contain 3 blocks which are upperOfTemplateMiddle, 
+middleOfTemplateMiddle and lowerOfTemplateMiddle. */
+/* .commonTemplate{
+    display:grid;
+    grid-template-columns:13.25% 82% 4.75%;
+    border-style: none none solid none;
+    border-color: rgb(240, 240, 240);
+    border-width: 0.25px;
+    transition-duration: 0.25s;
+}
+.commonTemplate:hover{
+    background-color: rgb(245, 245, 245);
+}
+.leftOfTemplate{
+    width: 3.25vw;
+    height: 6.8vh;
+    position: relative;
+}
+.templatePicture{
+    width: 3.2vw;
+    height: 7vh;
+    border-radius: 50%;
+    position: absolute;
+    top:1.25vh;
+    left:1.15vw;
+}
+.middleOfTemplate{
+    display: flex;
+    flex-wrap: wrap;
+}
+.upperOfTemplateMiddle{
+    width: 100%;
+    height: 4vh;
+    position: relative;
+    font-family: 'Arvo', serif;
+
+}
+.middleOfTemplateMiddle{
+    width: 100%;
+    height: 12vh;
+    box-sizing: border-box;
+    padding-top: 1vh;
+}
+.lowerOfTemplateMiddle{
+    width: 100%;
+    height: 4.5vh;
+}
+.rightOfTemplate{
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 1.95vh;
+} */
+/*End of (Common Template)
+==============================================================================================*/
+
+/*Note ==> The Down Side Contains some of items which are firstItem and commonItem
+Styling of (DOWN SIDE) of the middle section*/
+
+/*This is style of (firstItem) of down side*/
+.firstItem{
+    display: flex;
+    flex-wrap: wrap;
+    height:16vh;
+    border-style:none none solid none;
+    border-color: rgb(240, 240, 240);
+    border-width: 0.25px; 
+}
+.commonImagePart{
+    width: 10.8vh;
+    height: 8vh;
+    box-sizing: border-box;
+    padding-left: 1.1vw;
+    padding-top: 1.4vh;
+}
+.profileImage{
+    width: 3.20vw;
+    height: 6.8vh;
+    border-radius: 50%;
+}
+.firstItemText{
+    width: 50%;
+    height: 8vh;
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+    color:rgb(95, 95, 95);
+    box-sizing:border-box;
+    padding-top:3vh;
+}
+.firstItemFonts{
+    width: 50%;
+    height: 8vh;
+    box-sizing: border-box;
+    padding-left:13.5%;
+    padding-top: 3vh;
+}
+i.firstItemIcons{
+    color:rgba(29,155,240,1);
+    padding-right:8%;
+}
+.firstItemButton{
+    width: 50%;
+    height: 8vh;
+    box-sizing: border-box;
+    padding-left: 33.5%;
+    padding-top: 2vh;
+}
+.tweetButton{
+    font-size: 15px;
+    height: 5vh;
+    width: 5.15vw;
+    border-style:none;
+    border-radius:40px;
+    background-color: rgba(29,155,240,0.5);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+/*End of the firstItem of down side
+===================================================================*/
+/* 
+Note ==> item2 contains 3 parts which are item2Part1, item2Part2 and item2Part3
+Styling of item2
+*/
+.commonItem{
+    border-style:none none solid none;
+    border-color: rgb(240, 240, 240);
+    border-width: 0.25px; 
+    display:grid;
+    grid-template-columns:13% 82% 5%;
+    font-family: 'Arvo', serif;
+    transition-duration: 0.25s;
+}
+.commonItem:hover{
+    background-color: rgb(245, 245, 245);
+}
+.commonItemImageOfLeftPart{
+    box-sizing: border-box;
+    padding-left: 1.1vw;
+    padding-top: 1.4vh;
+}
+.commonImageOfLeftPart{
+    width: 3.25vw;
+    height: 6.8vh;
+    border-radius: 50%;
+}
+.commonItemMiddlePart{
+    display:flex;
+    flex-wrap:wrap;
+}
+.commonItemMiddlePartUpper{
+    width: 100%;
+    height:4.7vh;
+    display:flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-top: 1.5vh;
+    font-family: 'Sarabun', sans-serif;
+}
+.commonItemMiddlePartUpperRight{
+    padding-left: 0.5vw;
+    color:rgb(95, 95, 95); 
+}
+.commonItemMiddlePartUpperLeft:hover{
+    text-decoration:underline;
+}
+.time:hover{
+    text-decoration: underline;
+}
+.commonItemContentPart{
+    width: 100%;
+    font-family: 'Sarabun', sans-serif;
+    box-sizing: border-box;
+    padding-bottom: 1.5vh;
+}
+video{
+    box-sizing: border-box;
+    margin-top: 2vh;
+    border-radius: 5%;
+
+}
+.commonItemLowerPart{
+    width: 100%;
+    height:4.25vh;
+}
+i.commonItemIcons{
+    padding-right:8%;
+    color: gray;
+    position: relative;
+}
+.statistics{
+    font-size: 11px;
+    box-sizing: border-box;
+    padding-left: 1vw;
+}
+.hiddenBlock{
+    display: inline;
+    width: 2.5vw;
+    height: 5vh; 
+}
+.h1{
+    position: absolute;
+    bottom:-1.45vh;
+    right:4.75vw;
+    border-radius: 50%;
+    transition-duration: 0.25s;
+}
+.h2{
+    position: absolute;
+    bottom:-1.45vh;
+    right:4.85vw;
+    border-radius: 50%;
+    transition-duration: 0.25s;
+}
+.h3{
+    position: absolute;
+    bottom:-1.45vh;
+    right:5.15vw;
+    border-radius: 50%;
+    transition-duration: 0.25s;
+}
+.h4{
+    position: absolute;
+    bottom:-1.45vh;
+    right:1.75vw;
+    border-radius: 50%;
+    transition-duration: 0.25s;
+}
+.h1:hover{
+    background-color: rgb(29,155,240,0.1);
+}
+
+.h2:hover{
+    background-color:rgba(125, 234, 125,0.2);
+}
+
+.h3:hover{
+    background-color: rgba(245, 35, 105,0.1);
+}
+
+.h4:hover{
+    background-color: rgb(29,155,240,0.1);
+}
+.Icon1:hover{
+    color:rgb(29,155,240);
+    transition-duration: 0.25s;
+}
+.Icon2:hover{
+    color:rgb(67, 180, 67);
+    transition-duration: 0.25s;
+}
+.Icon3:hover{
+    color:rgb(245, 35, 105);
+    transition-duration: 0.25s;
+}
+.Icon4:hover{
+    color:rgb(29,155,240);
+    transition-duration: 0.25s;
+    
+}
+
+/*(Right Part) of the middle section*/
+.commonItemRightPart{
+    position: relative;
+    padding-top: 2vh;
+    box-sizing: border-box;
+    color:rgb(95, 95, 95);
+}
+.commonItemRightFont{
+    position: absolute;
+    width: 2.2vw;
+    height: 4.4vh;
+    border-radius:50%;
+    top:1.05vh;
+    right:0.4vw;
+    transition-duration: 0.25s;
+}
+.commonItemRightFont:hover{
+    background-color: rgba(29,155,240,0.1);
+    color:rgb(29,155,240);
+}
+/*End Of (Right Part) of middle section*/
+
+
+
+
+
+
+
+
+/*Styling Of (Right Section)*/
+
+.unusedright{
+    height: 150vh;
+    position: sticky;
+    top : 0;
+}
+.rightSection{
+    height: 150vh;
+    position: sticky;
+    top : 0;
+}
+
+
+.rightBlock{
+    background-color: white;
+    height: 8vh;
+    width: 26vw;
+    align-items:center;
+    position: sticky;
+    top:0;
+}
+.right{
+    width: 260px;
+    height: 19px;
+    background-color: rgba(207, 220, 228, 0.3);
+    border-radius: 25px;
+    margin-left: 30px;
+    padding: 12px 15px 18px 80px;
+    font-size:20px ;
+    color: rgba(27, 23, 23, 0.505);
+    margin-top: 0.65vh;
+    position: fixed;
+    top:0;
+}
+.underright{
+    
+    width: 360px;
+    height: 550px;
+    background-color: rgba(207, 217, 222, 0.15);
+    margin: 11px 15px 0 34px;
+    border-radius: 7%;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 43px;
+    
+}
+.class1{
+    color: rgba(0, 0, 0, 0.400);
+}
+.class2{
+    padding: 0px 8px 1px 268px ;
+    direction: rtl;
+}
+.class3{
+    color: rgba(0, 0, 0, 0.400);
+}
+.class4{ color: rgba(0, 0, 0, 0.400);}
+
+.class5{
+    direction: rtl;
+    padding-top: 0%;
+}
+.class6{
+     color: rgba(0, 0, 0, 0.400);}
+.class7{
+  
+     color: rgba(0, 0, 0, 0.400);}
+.class8{ 
+    direction: rtl;
+
+    padding: -5px 0 0 0
+}
+    
+.class9{
+    color: rgba(0, 0, 0, 0.400);
+    padding: 1px 0 5px 0;
+}
+.class10{
+     direction: rtl;
+    }
+.class11{ 
+    color: rgba(0, 0, 0, 0.400);
+}
+
+.class1,.class3,.class4,.class6,.class7,.class9,.class11{
+    padding-left: 15px;
+}
+      .what{
+        font-size: 23px;
+        padding-left: 15px;
+      }
+.class2,
+.class5,
+.class8,
+.class10{
+    padding-right: 10px;
+}
+.p1,
+.p2,
+.p3,
+.p4{
+    padding-right:15px;
+}
+/* under right 222222222222222 */
+.underright2{
+    width: 360px;
+    height: 450px;
+    background-color: rgb(29,155,240,0.1);
+    margin: 450px;
+    padding: 12px 15px 18px 80px;
+}
+
+.underRightlower{
+    height: 23vw;
+    background-color: rgba(207, 217, 222, 0.15);
+    width: 23vw;
+    margin-top: 2.2vh;
+    margin-left:5vh;
+    border-radius: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.copyButton{
+    font-size: 15px;
+    height: 4.7vh;
+    width: 5.15vw;
+    border-style:none;
+    border-radius:40px;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.followItem{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 4vw;
+    margin-top: 1.5vh;
+    padding-top: 1.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition-duration: 0.25s;
+}
+.followItem:hover{
+    background-color: rgba(225, 225, 225, 0.9);
+}
+.lastAnkerItem{
+    height: 2.5vw;
+    margin-top: 1.5vh;
+    padding-top: 1.35vh;
+    padding-left: 1vh;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition-duration: 0.25s;
+}
+.lastAnkerItem:hover{
+    background-color: rgba(225, 225, 225, 0.9);
+}
